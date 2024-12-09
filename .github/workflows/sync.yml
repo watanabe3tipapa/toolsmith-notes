@@ -1,0 +1,20 @@
+name: Sync Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Sync to another repository
+        run: |
+          git remote add sync git@github.com:watanabe3tipapa/toolsmith-notes.git
+          git push sync main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
