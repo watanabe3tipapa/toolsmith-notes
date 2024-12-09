@@ -13,7 +13,7 @@ flowchart TD
     A[リモートリポジトリ] -->|push/pull| B[デバイスA]
     A -->|push/pull| C[デバイスB]
     
-    subgraph リポジトリ（base）
+    subgraph リポジトリ
         direction TB
         D[main]
         E[notes_dev]
