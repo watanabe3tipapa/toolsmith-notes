@@ -10,10 +10,10 @@
 
 flowchart TD
 
-    A[リモートリポジトリ] -->|push/pull| B[デバイスA]
-    A -->|push/pull| C[デバイスB]
+    A[リポジトリ] -->|push/pull| B[ubuntu_PC]
+    A -->|push/pull| C[macOS_PC]
     
-    subgraph リポジトリ
+    subgraph リモートリポジトリ
         direction TB
         D[main]
         E[notes_dev]
@@ -22,7 +22,7 @@ flowchart TD
         H[WholeSheBang/hotfix]
     end
 
-    subgraph デバイスA
+    subgraph Project_A
         direction TB
         I[main]
         J[notes_dev]
@@ -30,7 +30,7 @@ flowchart TD
         L[notes_Obsidian]
     end
 
-    subgraph デバイスB
+    subgraph Project_B
         direction TB
         M[main]
         N[notes_dev]
